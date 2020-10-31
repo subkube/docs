@@ -1,0 +1,29 @@
+site_name: SubKube Developers
+theme:
+  name: material
+  features:
+    - navigation.tabs
+  palette:
+    primary: white
+  font:
+    text: Source Sans Pro
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Subkube Developers:
+    - Home: index.md
+  - Getting Started:
+    - Getting Started: getting_started.md
+  - Concepts:
+    - Workloads: concepts/workloads.md
+    - Namespace: concepts/namespace.md
+    - Project: concepts/project.md
+  - CLI:
+    - subctl: cli.md
+  - API:
+    - Authentication: api/authentication.md
+    - Reference: api/reference.md
