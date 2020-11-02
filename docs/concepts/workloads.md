@@ -8,9 +8,7 @@ Many apps consist of various different workloads, which need to work together in
 order to serve the application as a whole. Kubernetes has an applicable workload
 type for any of these.
 
-For more information on workloads, please checkout the dedicated Kubernetes docs:
-
-  https://kubernetes.io/docs/concepts/workloads/
+For more information on workloads, please checkout the dedicated [Kubernetes docs](https://kubernetes.io/docs/concepts/workloads/)
 
 ## DaemonSets
 

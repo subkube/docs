@@ -20,10 +20,11 @@ nav:
     - Getting Started: getting_started.md
   - Concepts:
     - Workloads: concepts/workloads.md
-    - Namespace: concepts/namespace.md
     - Project: concepts/project.md
+  - Guides:
+    - Using Ingress with CertManager on SubKube: soon.md
   - CLI:
     - subctl: cli.md
   - API:
     - Authentication: api/authentication.md
-    - Reference: api/reference.md
+    - Reference: soon.md
