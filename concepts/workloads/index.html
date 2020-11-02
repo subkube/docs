@@ -348,9 +348,38 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Workloads
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Workloads
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#daemonsets" class="md-nav__link">
+    DaemonSets
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -361,7 +390,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../namespace/" class="md-nav__link">
+    <a href="../namespace.md" class="md-nav__link">
       Namespace
     </a>
   </li>
@@ -489,6 +518,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#daemonsets" class="md-nav__link">
+    DaemonSets
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -505,7 +549,13 @@
 to orchestrate workloads, for instance using the <em>deployment</em> resource, the
 <em>statefulSet</em> or the <em>daemonSet</em> resource.</p>
 <p>Many apps consist of various different workloads, which need to work together in
-order to serve the application as a whole. </p>
+order to serve the application as a whole. Kubernetes has an applicable workload
+type for any of these.</p>
+<p>For more information on workloads, please checkout the dedicated Kubernetes docs:</p>
+<p>https://kubernetes.io/docs/concepts/workloads/</p>
+<h2 id="daemonsets">DaemonSets</h2>
+<p>DaemonSets can not be used on SubKube as it is a shared platform, where no
+application should need a DaemonSet.</p>
                 
               
               
@@ -539,13 +589,13 @@ order to serve the application as a whole. </p>
           </a>
         
         
-          <a href="../namespace/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../project/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Namespace
+                Project
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

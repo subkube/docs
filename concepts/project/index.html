@@ -352,7 +352,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../namespace/" class="md-nav__link">
+    <a href="../namespace.md" class="md-nav__link">
       Namespace
     </a>
   </li>
@@ -372,9 +372,65 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Project
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Project
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    Namespaces
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-quota" class="md-nav__link">
+    Resource Quota
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persistent-volumes" class="md-nav__link">
+    Persistent Volumes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingress" class="md-nav__link">
+    Ingress
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -489,6 +545,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    Namespaces
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-quota" class="md-nav__link">
+    Resource Quota
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persistent-volumes" class="md-nav__link">
+    Persistent Volumes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingress" class="md-nav__link">
+    Ingress
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -501,8 +599,33 @@
                 
                 
                 <h1 id="project">Project</h1>
-<p>In SubKube, your Kubernetes Namespaces live inside a Project. Project can be personal,
-or belong to an Organization. </p>
+<p>In SubKube, your Kubernetes Namespaces are organised inside a Project. Project can be personal,
+or belong to an Organization.</p>
+<h2 id="namespaces">Namespaces</h2>
+<p>Namespaces are used in Kubernetes to group Workloads together. Namespaces can
+operate in various levels of isolation. In SubKube, this is configurable per
+project. More about namespaces can be found in the Kubernetes docs:</p>
+<p>https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</p>
+<h3 id="resource-quota">Resource Quota</h3>
+<p>Resource Quota are set on namespaces by Rancher based on the set Project limits.</p>
+<p>More about Resource Quotas in the Rancher docs (on which Subkube is built):</p>
+<p>https://rancher.com/docs/rancher/v2.x/en/project-admin/resource-quotas/quotas-for-projects/</p>
+<h2 id="persistent-volumes">Persistent Volumes</h2>
+<p>Are available and can be created using normal PVC's. Storage is implemented
+using Longhorn CSI.</p>
+<p>More about Persistent Volumes and associated Claims can be found in the Kubernetes docs:</p>
+<p>https://kubernetes.io/docs/concepts/storage/persistent-volumes/</p>
+<h2 id="ingress">Ingress</h2>
+<p>In Kubernetes, Ingress objects are used to allow your application to be accessed
+by the outside world, by using a reverse proxy. You can read more about the Ingress
+concept in Kubernetes' docs:</p>
+<p>https://kubernetes.io/docs/concepts/services-networking/ingress/</p>
+<p>The Nginx Ingress Controller is available for all users of Subkube, including
+certmanager, to allow SSL certificates to be set up automatically using
+Let's Encrypt.</p>
+<p>The Nginx Ingress Controller allows for very flexible configuration, for a full
+list of all options please see the nginx-ingress docs:</p>
+<p>https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/</p>
                 
               
               
@@ -521,7 +644,7 @@ or belong to an Organization. </p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../namespace/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../workloads/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -530,7 +653,7 @@ or belong to an Organization. </p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Namespace
+                Workloads
               </div>
             </div>
           </a>
