@@ -1,6 +1,7 @@
 site_name: SubKube Developers
 theme:
   name: material
+  logo: assets/logo.png
   features:
     - navigation.tabs
   palette:
@@ -14,8 +15,7 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Subkube Developers:
-    - Home: index.md
+  - Home: index.md
   - Getting Started:
     - Getting Started: getting_started.md
   - Concepts:
@@ -23,6 +23,7 @@ nav:
     - Project: concepts/project.md
   - Guides:
     - Using Ingress with CertManager on SubKube: soon.md
+    - Volumes on SubKube: soon.md
   - CLI:
     - subctl: cli.md
   - API:

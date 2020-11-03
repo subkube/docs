@@ -17,6 +17,14 @@ Resource Quota are set on namespaces by Rancher based on the set Project limits.
 
 More about Resource Quotas in the Rancher (on which Subkube is built) [docs](https://rancher.com/docs/rancher/v2.x/en/project-admin/resource-quotas/quotas-for-projects/)
 
+### Billing
+At Subkube, you are charged for reservation resources as specified by the limits
+of a project. These limits can be changed on the fly. Each hour, we calculate
+the total of resource limits for a certain resource type during that hour, and
+charge that to your subscription. If you change the limits for a project, or
+delete a project within that hour period, you're subscription will be charged
+for the applicable part of the hour, multiplied by the resource limit.
+
 
 ## Persistent Volumes
 
