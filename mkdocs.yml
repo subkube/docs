@@ -1,7 +1,7 @@
 site_name: SubKube Developers
 theme:
   name: material
-  logo: assets/logo.png
+  logo: img/logo.png
   features:
     - navigation.tabs
   palette:
