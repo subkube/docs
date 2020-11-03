@@ -75,8 +75,7 @@
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="../.." title="SubKube Developers" class="md-header-nav__button md-logo" aria-label="SubKube Developers">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -144,16 +143,13 @@
     <ul class="md-tabs__list">
       
         
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../.." class="md-tabs__link">
-          Subkube Developers
-        </a>
-      
-    </li>
-  
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
 
       
         
@@ -239,8 +235,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="SubKube Developers" class="md-nav__button md-logo" aria-label="SubKube Developers">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     SubKube Developers
@@ -253,36 +248,10 @@
       
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
-    
-    <label class="md-nav__link" for="nav-1">
-      Subkube Developers
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Subkube Developers" data-md-level="1">
-      <label class="md-nav__title" for="nav-1">
-        <span class="md-nav__icon md-icon"></span>
-        Subkube Developers
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
     <a href="../.." class="md-nav__link">
       Home
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -410,6 +379,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#billing" class="md-nav__link">
+    Billing
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -470,6 +446,18 @@
   <li class="md-nav__item">
     <a href="../../soon/" class="md-nav__link">
       Using Ingress with CertManager on SubKube
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../soon/" class="md-nav__link">
+      Volumes on SubKube
     </a>
   </li>
 
@@ -605,6 +593,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#billing" class="md-nav__link">
+    Billing
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -648,6 +643,13 @@ project.</p>
 <h3 id="resource-quota">Resource Quota</h3>
 <p>Resource Quota are set on namespaces by Rancher based on the set Project limits.</p>
 <p>More about Resource Quotas in the Rancher (on which Subkube is built) <a href="https://rancher.com/docs/rancher/v2.x/en/project-admin/resource-quotas/quotas-for-projects/">docs</a></p>
+<h3 id="billing">Billing</h3>
+<p>At Subkube, you are charged for reservation resources as specified by the limits
+of a project. These limits can be changed on the fly. Each hour, we calculate
+the total of resource limits for a certain resource type during that hour, and
+charge that to your subscription. If you change the limits for a project, or
+delete a project within that hour period, you're subscription will be charged
+for the applicable part of the hour, multiplied by the resource limit.</p>
 <h2 id="persistent-volumes">Persistent Volumes</h2>
 <p>Are available and can be created using normal PVC's. Storage is implemented
 using Longhorn CSI.</p>
