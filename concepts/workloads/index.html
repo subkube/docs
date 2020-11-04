@@ -13,7 +13,7 @@
     
     
       
-        <title>Workloads - SubKube Developers</title>
+        <title>Workloads - Subkube Docs</title>
       
     
     
@@ -38,6 +38,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     
       
@@ -73,7 +75,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../.." title="SubKube Developers" class="md-header-nav__button md-logo" aria-label="SubKube Developers">
+    <a href="../.." title="Subkube Docs" class="md-header-nav__button md-logo" aria-label="Subkube Docs">
       
   <img src="../../img/logo.png" alt="logo">
 
@@ -85,7 +87,7 @@
       
         <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
-            SubKube Developers
+            Subkube Docs
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
@@ -183,7 +185,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../soon/" class="md-tabs__link">
+        <a href="../../guides/pod-security-context/" class="md-tabs__link">
           Guides
         </a>
       
@@ -233,12 +235,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="SubKube Developers" class="md-nav__button md-logo" aria-label="SubKube Developers">
+    <a href="../.." title="Subkube Docs" class="md-nav__button md-logo" aria-label="Subkube Docs">
       
   <img src="../../img/logo.png" alt="logo">
 
     </a>
-    SubKube Developers
+    Subkube Docs
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -353,8 +355,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#daemonsets" class="md-nav__link">
-    DaemonSets
+  <a href="#pod-security-context" class="md-nav__link">
+    Pod Security Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#not-available-in-subkube" class="md-nav__link">
+    Not Available in Subkube
   </a>
   
 </li>
@@ -410,8 +419,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../soon/" class="md-nav__link">
-      Using Ingress with CertManager on SubKube
+    <a href="../../guides/pod-security-context/" class="md-nav__link">
+      Configure a Pod to run with a limited SecurityContext
     </a>
   </li>
 
@@ -422,7 +431,31 @@
 
 
   <li class="md-nav__item">
-    <a href="../../soon/" class="md-nav__link">
+    <a href="../../guides/soon/" class="md-nav__link">
+      Using Ingress with CertManager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/soon/" class="md-nav__link">
+      Using Ingress with a Wildcard domain & certificate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/soon/" class="md-nav__link">
       Volumes on SubKube
     </a>
   </li>
@@ -545,8 +578,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#daemonsets" class="md-nav__link">
-    DaemonSets
+  <a href="#pod-security-context" class="md-nav__link">
+    Pod Security Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#not-available-in-subkube" class="md-nav__link">
+    Not Available in Subkube
   </a>
   
 </li>
@@ -572,9 +612,56 @@ to orchestrate workloads, for instance using the <em>deployment</em> resource, t
 order to serve the application as a whole. Kubernetes has an applicable workload
 type for any of these.</p>
 <p>For more information on workloads, please checkout the dedicated <a href="https://kubernetes.io/docs/concepts/workloads/">Kubernetes docs</a></p>
-<h2 id="daemonsets">DaemonSets</h2>
-<p>DaemonSets can not be used on SubKube as it is a shared platform, where no
-application should need a DaemonSet.</p>
+<h2 id="pod-security-context">Pod Security Context</h2>
+<p>By default, many containers used to run as root user. This isn't an option on a
+shared cluster, as this could potentially allow users to "break out" of a running
+container, and gain access to the entire node.</p>
+<p>In Kubernetes this is enforced using PodSecurityPolicies. The default
+PodSecurityPolicy enforced on Subkube is called 'restricted' and is very comparable
+to those seen in large scale enterprise Kubernetes deployments.</p>
+<h2 id="not-available-in-subkube">Not Available in Subkube</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daemonset</td>
+<td>DaemonSets can not be used on SubKube as it is a shared</td>
+</tr>
+<tr>
+<td></td>
+<td>platform, where no application should need a DaemonSet.</td>
+</tr>
+<tr>
+<td>NodePort Service</td>
+<td>Too unpredictable for production usage , incompatible</td>
+</tr>
+<tr>
+<td></td>
+<td>with Subkube cluster firewall</td>
+</tr>
+<tr>
+<td>Container Hostport</td>
+<td>Too unpredictable for production usage , incompatible</td>
+</tr>
+<tr>
+<td></td>
+<td>with Subkube cluster firewall</td>
+</tr>
+<tr>
+<td>Custom Resource</td>
+<td>Incompatible with shared cluster usage, as CRDs are</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>cluster-wide resources.</td>
+</tr>
+</tbody>
+</table>
                 
               
               

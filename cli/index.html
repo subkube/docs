@@ -13,7 +13,7 @@
     
     
       
-        <title>subctl - SubKube Developers</title>
+        <title>subctl - Subkube Docs</title>
       
     
     
@@ -38,6 +38,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     
       
@@ -73,7 +75,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="SubKube Developers" class="md-header-nav__button md-logo" aria-label="SubKube Developers">
+    <a href=".." title="Subkube Docs" class="md-header-nav__button md-logo" aria-label="Subkube Docs">
       
   <img src="../img/logo.png" alt="logo">
 
@@ -85,7 +87,7 @@
       
         <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
-            SubKube Developers
+            Subkube Docs
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
@@ -183,7 +185,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../soon/" class="md-tabs__link">
+        <a href="../guides/pod-security-context/" class="md-tabs__link">
           Guides
         </a>
       
@@ -233,12 +235,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="SubKube Developers" class="md-nav__button md-logo" aria-label="SubKube Developers">
+    <a href=".." title="Subkube Docs" class="md-nav__button md-logo" aria-label="Subkube Docs">
       
   <img src="../img/logo.png" alt="logo">
 
     </a>
-    SubKube Developers
+    Subkube Docs
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -370,8 +372,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../soon/" class="md-nav__link">
-      Using Ingress with CertManager on SubKube
+    <a href="../guides/pod-security-context/" class="md-nav__link">
+      Configure a Pod to run with a limited SecurityContext
     </a>
   </li>
 
@@ -382,7 +384,31 @@
 
 
   <li class="md-nav__item">
-    <a href="../soon/" class="md-nav__link">
+    <a href="../guides/soon/" class="md-nav__link">
+      Using Ingress with CertManager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guides/soon/" class="md-nav__link">
+      Using Ingress with a Wildcard domain & certificate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guides/soon/" class="md-nav__link">
       Volumes on SubKube
     </a>
   </li>
@@ -580,10 +606,20 @@ Namespaces, called <code>subctl</code>.</p>
 <p>The <code>subctl</code> is written in python, using click, and as such is easiest
 installed using <code>pip</code> as shown below, but self-contained binaries are available
 for most platforms as well.</p>
-<div class="highlight"><pre><span></span><code>pip install git+https://github.com/subkube/subctl
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pip install git+https://github.com/subkube/subctl
 </code></pre></div>
+</td></tr></table>
 <h2 id="usage">Usage</h2>
-<div class="highlight"><pre><span></span><code>subctl login
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>subctl login
 
 subctl get project
 subctl get namespace
@@ -594,6 +630,7 @@ subctl use namespace
 subctl create namespace
 subctl create project
 </code></pre></div>
+</td></tr></table>
                 
               
               
@@ -612,7 +649,7 @@ subctl create project
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../soon/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../guides/soon/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
