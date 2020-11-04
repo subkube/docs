@@ -48,8 +48,15 @@ distribution.
 ## Deploy workloads
 
 Once we have our project, namespace and `kubectl` configured, we can check to
-see if everything works by running a test pod interactively:
+see if everything works by running a test pod interactively.
+
+As you can notice
+- we've set a securityContext using overrides, please see
+  [Concept: Workloads](/concepts/workloads/) for more on SecurityContext and
+  PodSecurityPolicies in Subkube
+- we've set limits for the pod using --limits, please see
+  [Concept: Projects](/concepts/projects) for more on Resource Limits in Subkube
 
 ```
-kubectl run -n <YOUR-NAMESPACE> -i --tty busybox --image=busybox -- sh
+kubectl run -n <YOUR-NAMESPACE> -i --tty busybox --image=busybox --overrides='{"spec":{"securityContext":{"runAsUser":65534}}}' --limits='cpu=200m,memory=100Mi' --rm -- echo 'Hello World from Subkube!'
 ```

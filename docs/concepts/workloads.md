@@ -10,7 +10,25 @@ type for any of these.
 
 For more information on workloads, please checkout the dedicated [Kubernetes docs](https://kubernetes.io/docs/concepts/workloads/)
 
-## DaemonSets
+## Pod Security Context
 
-DaemonSets can not be used on SubKube as it is a shared platform, where no
-application should need a DaemonSet.
+By default, many containers used to run as root user. This isn't an option on a
+shared cluster, as this could potentially allow users to "break out" of a running
+container, and gain access to the entire node.
+
+In Kubernetes this is enforced using PodSecurityPolicies. The default
+PodSecurityPolicy enforced on Subkube is called 'restricted' and is very comparable
+to those seen in large scale enterprise Kubernetes deployments.
+
+## Not Available in Subkube
+
+| Resource            | Reason                                                   |
+| ------------------- | ---
+| Daemonset           | DaemonSets can not be used on SubKube as it is a shared  |
+|                     | platform, where no application should need a DaemonSet.  |
+| NodePort Service    | Too unpredictable for production usage , incompatible    |
+|                     | with Subkube cluster firewall                            |
+| Container Hostport  | Too unpredictable for production usage , incompatible    |
+|                     | with Subkube cluster firewall                            |
+| Custom Resource     | Incompatible with shared cluster usage, as CRDs are      |
+| Definition          | cluster-wide resources.                                  |
