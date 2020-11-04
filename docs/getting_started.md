@@ -1,8 +1,23 @@
 # Getting Started
 
+!!! tip
+    For hardcore command line users, we've created `subctl`, a simple CLI tool
+    allowing you to log in to SubKube and interact with your Projects and
+    Namespace directly from your shell, just as you would with `kubectl`.
+    More about how to install [`subctl` here](cli.md)
+
+
 ## Signing up
 
 To start using SubKube, [sign up for an account](http://app.subku.be/accounts/signup/)
+
+Before you can start creating projects, you'll need to setup a billing method
+
+!!!+ tip
+  If you wish to use `subctl`, don't forget to log in
+  ``` sh
+  subctl login
+  ```
 
 
 ## Create a Project
@@ -10,13 +25,17 @@ To start using SubKube, [sign up for an account](http://app.subku.be/accounts/si
 Once you've signed up and are logged in to SubKube, you need to create a project
 to deploy Namespaces and Workloads to.
 
-Open the [_Projects_](http://app.subku.be/projects/) page and click the ___Create Project___ button
+=== "Subkube UI"
 
-!!! tip
-    For hardcore command line users, we've created `subctl`, a simple CLI tool
-    allowing you to log in to SubKube and interact with your Projects and
-    Namespace directly from your shell, just as you would with `kubectl`.
-    More about [`subctl` here](cli.md)
+    Open the [_Projects_](http://app.subku.be/projects/) page and click the ___Create Project___ button.
+
+    ![Subkube UI Project List](/img/screenshots/app.poc.subku.be_projects_.png){: .shadow}
+
+=== "subctl"
+
+    ``` sh
+    subctl create project <PROJECT-NAME>
+    ```
 
 
 ## Create a Namespace
@@ -24,23 +43,35 @@ Open the [_Projects_](http://app.subku.be/projects/) page and click the ___Creat
 After creating a project, we need to create a Kubernetes Namespace to deploy
 our Workloads to.
 
-This can easily be done from a _Project_ page, by clicking the
-___Create Namespace___ button.
+=== "Subkube UI"
+
+    This can easily be done from a _Project_ page, by clicking the ___Create Namespace___ button.
+
+    ![Subkube UI Project Overview](/img/screenshots/app.poc.subku.be_projects_project.png){: .shadow}
+
+=== "subctl"
+
+    ``` sh
+    subctl create namespace <NAMESPACE-NAME> -p <PROJECT-UUID>
+    ```
 
 
 ## Setup Kubectl
 
 In order to use `kubectl`, we need to setup our `kubeconfig`.
 
-On your projects' page you will find the Kubeconfig card, which allows you to
-download the `kubeconfig` as a file, which will be called `subkubeconfig`, or
-you can show the `kubeconfig` for inspection or manual copy-pasting /
-distribution.
+=== "Subkube UI"
 
-!!! tip
-    If you have `subctl` installed, you can simply run the following to
-    automatically setup your existing `kubeconfig` to allow access to subkube:
-    ```
+    On your projects' page you will find the Kubeconfig card, which allows you to
+    download the `kubeconfig` as a file, which will be called `subkubeconfig`, or
+    you can show the `kubeconfig` for inspection or manual copy-pasting /
+    distribution.
+
+    ![Subkube UI Project Overview](/img/screenshots/app.poc.subku.be_projects_project.png){: .shadow}
+
+=== "subctl"
+
+    ``` sh
     subctl use project <project-uuid>
     ```
 
@@ -57,6 +88,8 @@ As you can notice
 - we've set limits for the pod using --limits, please see
   [Concept: Projects](/concepts/projects) for more on Resource Limits in Subkube
 
-```
-kubectl run -n <YOUR-NAMESPACE> -i --tty busybox --image=busybox --overrides='{"spec":{"securityContext":{"runAsUser":65534}}}' --limits='cpu=200m,memory=100Mi' --rm -- echo 'Hello World from Subkube!'
+```sh
+kubectl run -n <YOUR-NAMESPACE> -i --tty busybox --image=busybox \
+  --overrides='{"spec":{"securityContext":{"runAsUser":65534}}}' \
+  --limits='cpu=100m,memory=100Mi' --rm -- echo 'Hello World from Subkube!'
 ```

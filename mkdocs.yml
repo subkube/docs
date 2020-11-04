@@ -12,7 +12,9 @@ theme:
 markdown_extensions:
   - admonition
   - pymdownx.details
+  - pymdownx.tabbed
   - pymdownx.superfences
+  - attr_list
 
 nav:
   - Home: index.md
@@ -29,3 +31,6 @@ nav:
   - API:
     - Authentication: api/authentication.md
     - Reference: soon.md
+
+extra_css:
+  - stylesheets/extra.css
