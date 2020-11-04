@@ -1,4 +1,4 @@
-site_name: SubKube Developers
+site_name: Subkube Docs
 theme:
   name: material
   logo: img/logo.png
@@ -11,9 +11,13 @@ theme:
 
 markdown_extensions:
   - admonition
+  - pymdownx.highlight:
+      linenums: true
   - pymdownx.details
   - pymdownx.tabbed
   - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tasklist
   - attr_list
 
 nav:
@@ -24,8 +28,10 @@ nav:
     - Workloads: concepts/workloads.md
     - Project: concepts/project.md
   - Guides:
-    - Using Ingress with CertManager on SubKube: soon.md
-    - Volumes on SubKube: soon.md
+    - Configure a Pod to run with a limited SecurityContext: guides/pod-security-context.md
+    - Using Ingress with CertManager: guides/soon.md
+    - Using Ingress with a Wildcard domain & certificate: guides/soon.md
+    - Volumes on SubKube: guides/soon.md
   - CLI:
     - subctl: cli.md
   - API:
