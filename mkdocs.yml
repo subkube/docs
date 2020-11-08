@@ -32,6 +32,7 @@ nav:
     - Using Ingress with CertManager: guides/soon.md
     - Using Ingress with a Wildcard domain & certificate: guides/soon.md
     - Volumes on SubKube: guides/soon.md
+    - Deploy from Docker Compose using Kompose: guides/kompose.md
   - CLI:
     - subctl: cli.md
   - API:
