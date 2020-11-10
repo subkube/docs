@@ -22,6 +22,7 @@ markdown_extensions:
 
 google_analytics:
   - G-D0ZB95JSN5
+  - auto
 
 nav:
   - Home: index.md
