@@ -20,6 +20,9 @@ markdown_extensions:
   - pymdownx.tasklist
   - attr_list
 
+google_analytics:
+  - G-D0ZB95JSN5
+
 nav:
   - Home: index.md
   - Getting Started:
@@ -29,9 +32,9 @@ nav:
     - Project: concepts/project.md
   - Guides:
     - Configure a Pod to run with a limited SecurityContext: guides/pod-security-context.md
-    - Using Ingress with CertManager: guides/soon.md
-    - Using Ingress with a Wildcard domain & certificate: guides/soon.md
-    - Volumes on SubKube: guides/soon.md
+    - Using Ingress with CertManager: guides/ingress-certmanager.md
+    # - Using Ingress with a Wildcard domain & certificate: guides/soon.md
+    # - Volumes on Subkube: guides/soon.md
     - Deploy from Docker Compose using Kompose: guides/kompose.md
   - CLI:
     - subctl: cli.md
