@@ -189,7 +189,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../guides/pod-security-context/" class="md-tabs__link">
+        <a href="../../guides/kompose/" class="md-tabs__link">
           Guides
         </a>
       
@@ -423,6 +423,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../guides/kompose/" class="md-nav__link">
+      Deploy from Docker Compose using Kompose
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/helm/" class="md-nav__link">
+      Deploy using Helm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../guides/pod-security-context/" class="md-nav__link">
       Configure a Pod to run with a limited SecurityContext
     </a>
@@ -447,8 +471,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/kompose/" class="md-nav__link">
-      Deploy from Docker Compose using Kompose
+    <a href="../../guides/soon/" class="md-nav__link">
+      Using Ingress with a Wildcard domain & certificate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/deploy-github-actions/" class="md-nav__link">
+      Automated Deployment using Github Actions
     </a>
   </li>
 
@@ -622,35 +658,19 @@ to those seen in large scale enterprise Kubernetes deployments.</p>
 <tbody>
 <tr>
 <td>Daemonset</td>
-<td>DaemonSets can not be used on SubKube as it is a shared</td>
-</tr>
-<tr>
-<td></td>
-<td>platform, where no application should need a DaemonSet.</td>
+<td>DaemonSets can not be used on SubKube as it is a shared platform, where no application should need a DaemonSet.</td>
 </tr>
 <tr>
 <td>NodePort Service</td>
-<td>Too unpredictable for production usage , incompatible</td>
-</tr>
-<tr>
-<td></td>
-<td>with Subkube cluster firewall</td>
+<td>Too unpredictable for production usage , incompatible with Subkube cluster firewall</td>
 </tr>
 <tr>
 <td>Container Hostport</td>
-<td>Too unpredictable for production usage , incompatible</td>
+<td>Too unpredictable for production usage , incompatible with Subkube cluster firewall</td>
 </tr>
 <tr>
-<td></td>
-<td>with Subkube cluster firewall</td>
-</tr>
-<tr>
-<td>Custom Resource</td>
-<td>Incompatible with shared cluster usage, as CRDs are</td>
-</tr>
-<tr>
-<td>Definition</td>
-<td>cluster-wide resources.</td>
+<td>Custom Resource Definition</td>
+<td>Incompatible with shared cluster usage, as CRDs are cluster-wide resources.</td>
 </tr>
 </tbody>
 </table>
