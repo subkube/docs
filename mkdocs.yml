@@ -32,11 +32,12 @@ nav:
     - Workloads: concepts/workloads.md
     - Project: concepts/project.md
   - Guides:
+    - Deploy from Docker Compose using Kompose: guides/kompose.md
+    - Deploy using Helm: guides/helm.md
     - Configure a Pod to run with a limited SecurityContext: guides/pod-security-context.md
     - Using Ingress with CertManager: guides/ingress-certmanager.md
-    # - Using Ingress with a Wildcard domain & certificate: guides/soon.md
-    # - Volumes on Subkube: guides/soon.md
-    - Deploy from Docker Compose using Kompose: guides/kompose.md
+    - Using Ingress with a Wildcard domain & certificate: guides/soon.md
+    - Automated Deployment using Github Actions: guides/deploy-github-actions.md
   - CLI:
     - subctl: cli.md
   - API:

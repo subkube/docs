@@ -24,11 +24,7 @@ to those seen in large scale enterprise Kubernetes deployments.
 
 | Resource            | Reason                                                   |
 | ------------------- | ---
-| Daemonset           | DaemonSets can not be used on SubKube as it is a shared  |
-|                     | platform, where no application should need a DaemonSet.  |
-| NodePort Service    | Too unpredictable for production usage , incompatible    |
-|                     | with Subkube cluster firewall                            |
-| Container Hostport  | Too unpredictable for production usage , incompatible    |
-|                     | with Subkube cluster firewall                            |
-| Custom Resource     | Incompatible with shared cluster usage, as CRDs are      |
-| Definition          | cluster-wide resources.                                  |
+| Daemonset           | DaemonSets can not be used on SubKube as it is a shared platform, where no application should need a DaemonSet.  |
+| NodePort Service    | Too unpredictable for production usage , incompatible with Subkube cluster firewall                            |
+| Container Hostport  | Too unpredictable for production usage , incompatible with Subkube cluster firewall                            |
+| Custom Resource Definition    | Incompatible with shared cluster usage, as CRDs are cluster-wide resources.                                  |
