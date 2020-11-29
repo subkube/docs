@@ -29,8 +29,9 @@ nav:
   - Getting Started:
     - Getting Started: getting_started.md
   - Concepts:
-    - Workloads: concepts/workloads.md
     - Project: concepts/project.md
+    - Workloads: concepts/workloads.md
+    - Security: concepts/security.md
   - Guides:
     - Deploy from Docker Compose using Kompose: guides/kompose.md
     - Deploy using Helm: guides/helm.md

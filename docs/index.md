@@ -14,6 +14,7 @@ Learn about the concepts used in Subkube and how they relate to traditional Kube
 
 - [Project](concepts/project.md)
 - [Workloads](concepts/workloads.md)
+- [Security](concepts/security.md)
 
 ---
 
