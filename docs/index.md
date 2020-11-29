@@ -21,11 +21,23 @@ Learn about the concepts used in Subkube and how they relate to traditional Kube
 
 Whether you're an experienced Kubernetes App Developer or just getting started, our Guides help you understand Subkube and Kubernetes, and guide you through setting up some more complex deployments on Subkube.
 
+
+### Kubernetes for Dummies
+
+- [Deploy from Docker Compose using Kompose](guides/kompose.md)
+- [Deploy using Helm](guides/helm.md)
+
+
+### Integrating with CI/CD
+
+- [Automated Deployment using Github Actions](guides/deploy-github-actions.md)
+- [Automated Deployment using Gitlab CI/CD](guides/soon.md)
+
+
 ### Security
 
 - [Configure a Pod to run with a limited SecurityContext](guides/pod-security-context.md)
 - [Using Ingress with CertManager](guides/ingress-certmanager.md)
-- [Deploy from Docker Compose using Kompose](guides/kompose.md)
 
 ---
 

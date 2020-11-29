@@ -85,11 +85,13 @@ As you can notice
 - we've set a securityContext using overrides, please see
   [Concept: Workloads](/concepts/workloads/) for more on SecurityContext and
   PodSecurityPolicies in Subkube
-- we've set limits for the pod using --limits, please see
+- we've set limits for the pod using `--limits`, please see
   [Concept: Projects](/concepts/projects) for more on Resource Limits in Subkube
 
 ```sh
 kubectl run -n <YOUR-NAMESPACE> -i --tty busybox --image=busybox \
   --overrides='{"spec":{"securityContext":{"runAsUser":65534}}}' \
-  --limits='cpu=100m,memory=100Mi' --rm -- echo 'Hello World from Subkube!'
+  --limits='cpu=100m,memory=100Mi' --rm sh
+$ echo 'hello world!'
+hello world!
 ```
