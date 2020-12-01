@@ -13,7 +13,7 @@
     
     
       
-        <title>Security - Subkube Docs</title>
+        <title>Automated Deployment using Gitlab CI - Subkube Docs</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#access-control" class="md-skip">
+        <a href="#prerequisites" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Security
+              Automated Deployment using Gitlab CI
             
           </span>
         </div>
@@ -176,7 +176,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../project/" class="md-tabs__link md-tabs__link--active">
+        <a href="../../concepts/project/" class="md-tabs__link">
           Concepts
         </a>
       
@@ -189,7 +189,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../guides/pod-security-context/" class="md-tabs__link">
+        <a href="../pod-security-context/" class="md-tabs__link md-tabs__link--active">
           Guides
         </a>
       
@@ -303,12 +303,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Concepts
@@ -328,7 +326,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../project/" class="md-nav__link">
+    <a href="../../concepts/project/" class="md-nav__link">
       Project
     </a>
   </li>
@@ -340,7 +338,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../workloads/" class="md-nav__link">
+    <a href="../../concepts/workloads/" class="md-nav__link">
       Workloads
     </a>
   </li>
@@ -350,126 +348,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Security
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../concepts/security/" class="md-nav__link">
       Security
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
-  </a>
-  
-    <nav class="md-nav" aria-label="Access Control">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2-factor-authentication" class="md-nav__link">
-    2 Factor Authentication
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api-keys" class="md-nav__link">
-    API Keys
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workload-isolation" class="md-nav__link">
-    Workload Isolation
-  </a>
-  
-    <nav class="md-nav" aria-label="Workload Isolation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#restricted-pod-security-policy" class="md-nav__link">
-    Restricted Pod Security Policy
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#namespace-network-isolation" class="md-nav__link">
-    Namespace Network Isolation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cluster-operations" class="md-nav__link">
-    Cluster Operations
-  </a>
-  
-    <nav class="md-nav" aria-label="Cluster Operations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hardening" class="md-nav__link">
-    Hardening
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#end-to-end-encryption" class="md-nav__link">
-    End-to-end Encryption
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lets-encrypt-integration" class="md-nav__link">
-    Let's Encrypt Integration
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -482,10 +365,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Guides
@@ -505,7 +390,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/pod-security-context/" class="md-nav__link">
+    <a href="../pod-security-context/" class="md-nav__link">
       Configure a Pod to run with a limited SecurityContext
     </a>
   </li>
@@ -517,7 +402,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/kompose/" class="md-nav__link">
+    <a href="../kompose/" class="md-nav__link">
       Deploy from Docker Compose using Kompose
     </a>
   </li>
@@ -529,7 +414,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/helm/" class="md-nav__link">
+    <a href="../helm/" class="md-nav__link">
       Deploying Node-RED using Helm
     </a>
   </li>
@@ -541,7 +426,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/ingress-certmanager/" class="md-nav__link">
+    <a href="../ingress-certmanager/" class="md-nav__link">
       Using Ingress with CertManager
     </a>
   </li>
@@ -553,7 +438,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/soon/" class="md-nav__link">
+    <a href="../soon/" class="md-nav__link">
       Using Ingress with a Wildcard domain & certificate
     </a>
   </li>
@@ -565,7 +450,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/deploy-github-actions/" class="md-nav__link">
+    <a href="../deploy-github-actions/" class="md-nav__link">
       Automated Deployment using Github Actions
     </a>
   </li>
@@ -575,11 +460,93 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../guides/deploy-gitlab-ci/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Automated Deployment using Gitlab CI
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Automated Deployment using Gitlab CI
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-application" class="md-nav__link">
+    Prepare Application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-repository" class="md-nav__link">
+    Prepare Repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-partial-gitlab-kubernetes-integration" class="md-nav__link">
+    Setup (Partial) Gitlab Kubernetes Integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-kubectl-action" class="md-nav__link">
+    Add Kubectl action
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-and-deploy" class="md-nav__link">
+    Commit and Deploy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -698,84 +665,51 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
-  
-    <nav class="md-nav" aria-label="Access Control">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2-factor-authentication" class="md-nav__link">
-    2 Factor Authentication
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api-keys" class="md-nav__link">
-    API Keys
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#workload-isolation" class="md-nav__link">
-    Workload Isolation
+  <a href="#steps" class="md-nav__link">
+    Steps
   </a>
   
-    <nav class="md-nav" aria-label="Workload Isolation">
+    <nav class="md-nav" aria-label="Steps">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#restricted-pod-security-policy" class="md-nav__link">
-    Restricted Pod Security Policy
+  <a href="#prepare-application" class="md-nav__link">
+    Prepare Application
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#namespace-network-isolation" class="md-nav__link">
-    Namespace Network Isolation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cluster-operations" class="md-nav__link">
-    Cluster Operations
-  </a>
-  
-    <nav class="md-nav" aria-label="Cluster Operations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hardening" class="md-nav__link">
-    Hardening
+  <a href="#prepare-repository" class="md-nav__link">
+    Prepare Repository
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#end-to-end-encryption" class="md-nav__link">
-    End-to-end Encryption
+  <a href="#setup-partial-gitlab-kubernetes-integration" class="md-nav__link">
+    Setup (Partial) Gitlab Kubernetes Integration
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lets-encrypt-integration" class="md-nav__link">
-    Let's Encrypt Integration
+  <a href="#add-kubectl-action" class="md-nav__link">
+    Add Kubectl action
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-and-deploy" class="md-nav__link">
+    Commit and Deploy
   </a>
   
 </li>
@@ -798,34 +732,97 @@
               
                 
                 
-                  <h1>Security</h1>
+                  <h1>Automated Deployment using Gitlab CI</h1>
                 
-                <p>As a shared tenant platform, Subkube takes security very seriously. Luckily, the container &amp; kubernetes ecosystem have been designed from the ground up with security on various levels in mind.</p>
-<h2 id="access-control">Access Control</h2>
-<p>Security starts at the front door. The Subkube platform uses state-of-the-art technology to ensure a user's identity before allowing access to any of our systems and applications.</p>
-<h3 id="2-factor-authentication">2 Factor Authentication</h3>
-<p>In general it's good habit to enable 2 factor authentication for your accounts whenever possible. Subkube offers a basic TOTP implementation, allowing you to use most Authenticator apps to generate tokens allowing you to login using the application interface or our <code>subctl</code> CLI.</p>
-<p>During 2FA setup, a backup token will be generated and shown, allowing you to regain access to your account if for some reason your TOTP applications is no longer able to produce valid tokens for your Subkube account (a lost phone for instance). Be sure to store the backup token in a safe place, to ensure access to your Subkube account at all times.</p>
-<h3 id="api-keys">API Keys</h3>
-<p>In modern day IT, we want to automate everything, but not at the expense of security. Fine-grained access control for automated processes is key in achieving this.</p>
-<p>Subkube implements a flexible way to create API tokens, to be consumed by various application, such as 3rd party services like Github and Gitlab, scripts running locally or on premise, but also in-cluster, to be used by auto-scaling tools for example. Tokens can be revoked at any time easily from the Subkube interface.</p>
-<h2 id="workload-isolation">Workload Isolation</h2>
-<p>As we briefly outlined in <a href="../workloads/">Workloads</a>, Subkube kubernetes clusters enforce certain policies and restrictions on the workloads customers run, the most important of which are the following:</p>
-<h3 id="restricted-pod-security-policy">Restricted Pod Security Policy</h3>
-<p>All namespaces created on Subkube have a 'restricted' PodSecurityPolicy applied by default. Amongst other things, this prohibits containers from running as the <code>root</code> user, and all security implications this has. For most applications, and well designed container images, this shouldn't pose a problem.</p>
-<p>As containers can not run as root, most processes will be unable to, for instance, allocate a port lower than <code>1000</code>. Also, package management isn't available while not running as user <code>root</code>. Though this might seem problematic at first, it really shouldn't be.</p>
-<p>If a container has been though-out and built properly, applications will never need these kinds of permissions in  order to run, and as such, neither does your container. For instance, if you feel you need <code>systemd</code> or <code>init</code> inside your container, you're probably trying to put various processes in a single container, which is bad practise, as Kubernetes offers you the Pod concept, specifically to deal with these kinds of "groups" of processes.</p>
-<h3 id="namespace-network-isolation">Namespace Network Isolation</h3>
-<p>As in any decent microservices architecture services need to be able to talk to oneanother, providing network connectivity between pods is vital to any Kubernetes deployment. However, as Subkube uses a shared tenancy principle, we do need to seperate traffic from various customers.</p>
-<p>We accomplish this by isolating traffic to a namespace, using Network Policies. Our clusters run Canal, a mixed implementation of Flannel to provide inter-node and inter-pod connectivity, combined with Calico to provide network policy management &amp; enforcement.</p>
-<p>By default, when a Namespace is created inside a project, NetworkPolicies are defined inside the namespace to allow traffic between the namespaces inside your project, and namespaces hosting Subkube shared services, such as the Ingress Controller.</p>
-<h2 id="cluster-operations">Cluster Operations</h2>
-<h3 id="hardening">Hardening</h3>
-<p>All our Kubernetes nodes run on selinux-enforced CentOS 8 Core, hardened according to enterprise standard. Our Kubernetes deployment takes all Kubernetes hardening considerations into account, and we run daily automated audits to ensure our clusters are compliant with the CIS Hardened benchmark.</p>
-<h3 id="end-to-end-encryption">End-to-end Encryption</h3>
-<p>We use Wireguard, both to connect our control-plane and worker nodes together, and to connect our frontend and APIs to our backing Kubernetes clusters, hosted across the internet. Wireguard is state-of-the-art and allows for full encryption with minimal overhead, to ensure fast response times across the platform.</p>
-<h3 id="lets-encrypt-integration">Let's Encrypt Integration</h3>
-<p>All projects utilising Ingress for connectivity benefit from out Let's Encrypt integration, which offers a wildcard certificate to be used by ingress resources in project namespaces, so we can properly enforce SSL for connecting to Ingress-exposed services.</p>
+                <p>You can use Gitlab CI/CD to deploy to Subkube directly from Gitlab.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A Namespace in a Subkube Project</li>
+<li>A Gitlab(.com) account</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<h3 id="prepare-application">Prepare Application</h3>
+<p>For this guide we will be deploying Nextcloud, which we covered in our
+<a href="../kompose/">Kompose</a> guide. The resulting manifests can easily be fetched from
+our examples repository, as shown below.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>curl -LO https://github.com/subkube/examples/archive/master.zip
+unzip master.zip
+mkdir -p nextcloud-from-gitlab/manifests
+cp -R examples-master/kompose/output-after/* nextcloud-from-gitlab/manifests/
+cd nextcloud-from-gitlab
+</code></pre></div>
+</td></tr></table>
+<h3 id="prepare-repository">Prepare Repository</h3>
+<p>After fetching the resources from our examples repository, you should create a
+new Gitlab repository.</p>
+<blockquote>
+<p><img alt="Create Github repository" class="shadow" src="/img/screenshots/github_actions/create_repo.png" /></p>
+</blockquote>
+<p>Now we can initialize the local git repository, and set up Gitlab as it's <code>origin</code>:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git init
+git add manifests/
+git commit -m &quot;first commit&quot;
+git remote add origin git@gitlab.com:stud-io/subkube/nextcloud-from-gitlab.git
+git push -u origin master
+</code></pre></div>
+</td></tr></table>
+<h3 id="setup-partial-gitlab-kubernetes-integration">Setup (Partial) Gitlab Kubernetes Integration</h3>
+<p>In order to deploy to Subkube using kubectl from Gitlab CI, we'll need to add
+Subkube as a Kubernetes environment to Gitlab. You don't need to supply a PEM
+certificate, as you use the Subkube API proxy to interface with the Kubernetes API.</p>
+<p><img alt="Create Kubernetes Gitlab Environment" class="shadow" src="/img/screenshots/gitlab_cicd/k8s_setup.png" /></p>
+<h3 id="add-kubectl-action">Add Kubectl action</h3>
+<p>After we've setup our kubeconfig in Github, we can define an Action using this
+config to deploy to subkube. Define the following action inside the <code>.github/workflows/deploy.yaml</code>
+file.</p>
+<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">.gitlab-ci.yml</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">stages</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">deploy</span>
+
+<span class="nt">deploy-subkube</span><span class="p">:</span>
+  <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">deploy</span>
+  <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lwolf/helm-kubectl-docker:latest</span>
+  <span class="nt">environment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SubkubeTest</span>
+  <span class="nt">script</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">kubectl config view</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">kubectl config unset clusters.gitlab-deploy.certificate-authority-data</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">kubectl apply -n poc-gitlab -f manifests/</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+<h3 id="commit-and-deploy">Commit and Deploy</h3>
+<p>Now everything is setup, we can push our changes and watch them be applied to
+your Subkube project.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git add .gitlab-ci.yml
+git commit -m &quot;Add Gitlab CI deploy to Subkube job&quot;
+git push origin main
+</code></pre></div>
+</td></tr></table>
+<blockquote>
+<p>Our workflow should now be visible under the <strong>actions</strong> tab:</p>
+<p><img alt="Github Action Output" class="shadow" src="/img/screenshots/github_actions/deploy_action.png" /></p>
+</blockquote>
                 
               
               
@@ -844,7 +841,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../workloads/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../deploy-github-actions/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -853,19 +850,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Workloads
+                Automated Deployment using Github Actions
               </div>
             </div>
           </a>
         
         
-          <a href="../../guides/pod-security-context/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../cli/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Configure a Pod to run with a limited SecurityContext
+                subctl
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
