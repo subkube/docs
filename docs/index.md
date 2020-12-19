@@ -23,7 +23,7 @@ Learn about the concepts used in Subkube and how they relate to traditional Kube
 Whether you're an experienced Kubernetes App Developer or just getting started, our Guides help you understand Subkube and Kubernetes, and guide you through setting up some more complex deployments on Subkube.
 
 
-### Kubernetes for Dummies
+### Deploying to Kubernetes
 
 - [Deploy from Docker Compose using Kompose](guides/kompose.md)
 - [Deploy using Helm](guides/helm.md)
@@ -32,7 +32,7 @@ Whether you're an experienced Kubernetes App Developer or just getting started, 
 ### Integrating with CI/CD
 
 - [Automated Deployment using Github Actions](guides/deploy-github-actions.md)
-- [Automated Deployment using Gitlab CI/CD](guides/soon.md)
+- [Automated Deployment using Gitlab CI/CD](guides/deploy-gitlab-ci.md)
 
 
 ### Security
