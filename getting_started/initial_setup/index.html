@@ -369,7 +369,19 @@
 
   <li class="md-nav__item">
     <a href="../interactive_console/" class="md-nav__link">
-      Using the Interactive Console
+      Interactive Console
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../services_ingresses/" class="md-nav__link">
+      Services & Ingress
     </a>
   </li>
 
@@ -697,11 +709,13 @@ More about how to install <a href="cli.md"><code>subctl</code> here</a></p>
 <h2 id="signing-up">Signing up</h2>
 <p>To start using SubKube, <a href="http://app.subku.be/accounts/signup/">sign up for an account</a></p>
 <p>Before you can start creating projects, you'll need to setup a billing method</p>
-<p>!!!+ tip
-  If you wish to use <code>subctl</code>, don't forget to log in
-  <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>subctl login
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you wish to use <code>subctl</code>, don't forget to log in
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>subctl login
 </code></pre></div>
 </td></tr></table></p>
+</div>
 <h2 id="create-a-project">Create a Project</h2>
 <p>Once you've signed up and are logged in to SubKube, you need to create a project
 to deploy Namespaces and Workloads to.</p>
@@ -729,6 +743,10 @@ our Workloads to.</p>
 </div>
 </div>
 <h2 id="setup-kubectl">Setup Kubectl</h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you don't have <code>kubectl</code> locally installed, checkout our <a href="../interactive_console/">Interactive Console</a>, which sets up your <code>kubeconfig</code> automatically for you, and offers <code>helm</code> and others besides <code>kubectl</code>.</p>
+</div>
 <p>In order to use <code>kubectl</code>, we need to setup our <code>kubeconfig</code>.</p>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Subkube UI</label><div class="tabbed-content">
 <p>On your projects' page you will find the Kubeconfig card, which allows you to
@@ -746,12 +764,18 @@ distribution.</p>
 <h2 id="deploy-workloads">Deploy workloads</h2>
 <p>Once we have our project, namespace and <code>kubectl</code> configured, we can check to
 see if everything works by running a test pod interactively.</p>
-<p>As you can notice
-- we've set a securityContext using overrides, please see
+<p>As you can notice</p>
+<ul>
+<li>
+<p>we've set a securityContext using overrides, please see
   <a href="/concepts/workloads/">Concept: Workloads</a> for more on SecurityContext and
-  PodSecurityPolicies in Subkube
-- we've set limits for the pod using <code>--limits</code>, please see
+  PodSecurityPolicies in Subkube</p>
+</li>
+<li>
+<p>we've set limits for the pod using <code>--limits</code>, please see
   <a href="/concepts/projects">Concept: Projects</a> for more on Resource Limits in Subkube</p>
+</li>
+</ul>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -802,7 +826,7 @@ hello world!
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Using the Interactive Console
+                Interactive Console
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

@@ -13,7 +13,7 @@
     
     
       
-        <title>Using the Interactive Console - Subkube Docs</title>
+        <title>Interactive Console - Subkube Docs</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-the-web-terminal" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -90,7 +95,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Using the Interactive Console
+              Interactive Console
             
           </span>
         </div>
@@ -303,10 +308,69 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Interactive Console
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
-      Using the Interactive Console
+      Interactive Console
     </a>
     
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-web-terminal" class="md-nav__link">
+    Using the web terminal
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the web terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-a-default-namespace-to-use" class="md-nav__link">
+    Setting a default namespace to use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#included-tools" class="md-nav__link">
+    Included Tools
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../services_ingresses/" class="md-nav__link">
+      Services & Ingress
+    </a>
   </li>
 
         
@@ -558,15 +622,86 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-web-terminal" class="md-nav__link">
+    Using the web terminal
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the web terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-a-default-namespace-to-use" class="md-nav__link">
+    Setting a default namespace to use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#included-tools" class="md-nav__link">
+    Included Tools
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Using the Interactive Console</h1>
+                  <h1>Interactive Console</h1>
                 
-                <p>Coming Soon</p>
+                <p>Subkube has an integrated interactive web-based console you can use to interact with your namespaces using tools like <code>kubectl</code> and <code>helm</code>. The interactive console uses websockets and can be used in any modern browser.</p>
+<h2 id="using-the-web-terminal">Using the web terminal</h2>
+<p>An interactive console can be opened from the <em>Project Overview</em> page, using the <strong>Interactive Terminal</strong> button.</p>
+<p><img alt="Subkube UI Interactive Terminal Button" class="shadow" src="/img/screenshots/interactive_terminal_button.png" /></p>
+<p>A new session will be created, and the terminal will be opened in a new tab.</p>
+<p><img alt="Subkube UI Interactive Terminal Window" class="shadow" src="/img/screenshots/interactive_terminal_open.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please note that each session is only valid for the duration of a single request. Refreshing the page will invalidate the session and discard your working environment.</p>
+</div>
+<h3 id="setting-a-default-namespace-to-use">Setting a default namespace to use</h3>
+<p>You can easily update your <code>kubeconfig</code> to use a single default namespace using the following command.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>kubectl config set-context --current --namespace &lt;YOUR-NAMESPACE&gt;
+</code></pre></div>
+</td></tr></table>
+<p>By setting a default namespace, you don't have to provide one for each individual <code>kubectl</code> / etc call.</p>
+<h2 id="included-tools">Included Tools</h2>
+<p>The following tools are included in the interactive terminal image:</p>
+<ul>
+<li>kubectl</li>
+<li>helm</li>
+<li>kubectx</li>
+<li>k9s</li>
+</ul>
                 
               
               
@@ -600,13 +735,13 @@
           </a>
         
         
-          <a href="../../concepts/project/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../services_ingresses/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Project
+                Services & Ingress
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
