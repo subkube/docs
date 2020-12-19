@@ -13,7 +13,7 @@
     
     
       
-        <title>Deploying Node-RED using Helm - Subkube Docs</title>
+        <title>Initial Setup - Subkube Docs</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#prerequisites" class="md-skip">
+        <a href="#initial-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Deploying Node-RED using Helm
+              Initial Setup
             
           </span>
         </div>
@@ -163,7 +163,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../getting_started/initial_setup/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           Getting Started
         </a>
       
@@ -189,7 +189,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../pod-security-context/" class="md-tabs__link md-tabs__link--active">
+        <a href="../../guides/pod-security-context/" class="md-tabs__link">
           Guides
         </a>
       
@@ -265,10 +265,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Getting Started
@@ -286,11 +288,77 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../getting_started/initial_setup/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Initial Setup
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Initial Setup
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#signing-up" class="md-nav__link">
+    Signing up
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-project" class="md-nav__link">
+    Create a Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-namespace" class="md-nav__link">
+    Create a Namespace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-kubectl" class="md-nav__link">
+    Setup Kubectl
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-workloads" class="md-nav__link">
+    Deploy workloads
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -300,7 +368,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting_started/interactive_console/" class="md-nav__link">
+    <a href="../interactive_console/" class="md-nav__link">
       Using the Interactive Console
     </a>
   </li>
@@ -377,12 +445,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Guides
@@ -402,7 +468,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../pod-security-context/" class="md-nav__link">
+    <a href="../../guides/pod-security-context/" class="md-nav__link">
       Configure a Pod to run with a limited SecurityContext
     </a>
   </li>
@@ -414,7 +480,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../kompose/" class="md-nav__link">
+    <a href="../../guides/kompose/" class="md-nav__link">
       Deploy from Docker Compose using Kompose
     </a>
   </li>
@@ -424,100 +490,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Deploying Node-RED using Helm
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../guides/helm/" class="md-nav__link">
       Deploying Node-RED using Helm
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
-    Steps
-  </a>
-  
-    <nav class="md-nav" aria-label="Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-helm" class="md-nav__link">
-    Get Helm
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-repo" class="md-nav__link">
-    Add Repo
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#first-install" class="md-nav__link">
-    First Install
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-a-values-file" class="md-nav__link">
-    Using a Values file
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#upgrading" class="md-nav__link">
-    Upgrading
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#further-reading" class="md-nav__link">
-    Further Reading
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -527,7 +504,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../deploy-github-actions/" class="md-nav__link">
+    <a href="../../guides/deploy-github-actions/" class="md-nav__link">
       Automated Deployment using Github Actions
     </a>
   </li>
@@ -539,7 +516,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../deploy-gitlab-ci/" class="md-nav__link">
+    <a href="../../guides/deploy-gitlab-ci/" class="md-nav__link">
       Automated Deployment using Gitlab CI
     </a>
   </li>
@@ -652,6 +629,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -660,63 +639,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#signing-up" class="md-nav__link">
+    Signing up
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
-    Steps
+  <a href="#create-a-project" class="md-nav__link">
+    Create a Project
   </a>
-  
-    <nav class="md-nav" aria-label="Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-helm" class="md-nav__link">
-    Get Helm
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-repo" class="md-nav__link">
-    Add Repo
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#first-install" class="md-nav__link">
-    First Install
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-a-values-file" class="md-nav__link">
-    Using a Values file
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#upgrading" class="md-nav__link">
-    Upgrading
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#further-reading" class="md-nav__link">
-    Further Reading
+  <a href="#create-a-namespace" class="md-nav__link">
+    Create a Namespace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-kubectl" class="md-nav__link">
+    Setup Kubectl
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-workloads" class="md-nav__link">
+    Deploy workloads
   </a>
   
 </li>
@@ -734,84 +686,83 @@
               
                 
                 
-                  <h1>Deploying Node-RED using Helm</h1>
-                
-                <p>Helm describes itself as the package manager for Kubernetes. It allows us to
-quickly install and upgrade an Application including all it's dependencies.</p>
-<p>In this guide we'll deploy an instance of node-red, an awesome automation tool you
-can easily host yourself.</p>
-<p>There are literally thousands of Helm charts you can easily deploy to any
-Subkube project, we've added a list at the bottom of the page for some awesome
-examples.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
-<li>A Namespace in a Subkube Project</li>
-<li>Helm (we'll install Helm as part of this guide)</li>
-</ul>
-<h2 id="steps">Steps</h2>
-<h3 id="get-helm">Get Helm</h3>
-<p>Installing Helm is easy as:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+                <h1 id="initial-setup">Initial Setup</h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For hardcore command line users, we've created <code>subctl</code>, a simple CLI tool
+allowing you to log in to SubKube and interact with your Projects and
+Namespace directly from your shell, just as you would with <code>kubectl</code>.
+More about how to install <a href="cli.md"><code>subctl</code> here</a></p>
+</div>
+<h2 id="signing-up">Signing up</h2>
+<p>To start using SubKube, <a href="http://app.subku.be/accounts/signup/">sign up for an account</a></p>
+<p>Before you can start creating projects, you'll need to setup a billing method</p>
+<p>!!!+ tip
+  If you wish to use <code>subctl</code>, don't forget to log in
+  <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>subctl login
+</code></pre></div>
+</td></tr></table></p>
+<h2 id="create-a-project">Create a Project</h2>
+<p>Once you've signed up and are logged in to SubKube, you need to create a project
+to deploy Namespaces and Workloads to.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Subkube UI</label><div class="tabbed-content">
+<p>Open the <a href="http://app.subku.be/projects/"><em>Projects</em></a> page and click the <strong><em>Create Project</em></strong> button.</p>
+<p><img alt="Subkube UI Project List" class="shadow" src="/img/screenshots/app.poc.subku.be_projects_.png" /></p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">subctl</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>subctl create project &lt;PROJECT-NAME&gt;
 </code></pre></div>
 </td></tr></table>
-<p>Or using Homebrew:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>brew install helm
+</div>
+</div>
+<h2 id="create-a-namespace">Create a Namespace</h2>
+<p>After creating a project, we need to create a Kubernetes Namespace to deploy
+our Workloads to.</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Subkube UI</label><div class="tabbed-content">
+<p>This can easily be done from a <em>Project</em> page, by clicking the <strong><em>Create Namespace</em></strong> button.</p>
+<p><img alt="Subkube UI Project Overview" class="shadow" src="/img/screenshots/app.poc.subku.be_projects_project.png" /></p>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">subctl</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>subctl create namespace &lt;NAMESPACE-NAME&gt; -p &lt;PROJECT-UUID&gt;
 </code></pre></div>
 </td></tr></table>
-<p>Or on windows using Chocolatey:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>choco install kubernetes-helm
+</div>
+</div>
+<h2 id="setup-kubectl">Setup Kubectl</h2>
+<p>In order to use <code>kubectl</code>, we need to setup our <code>kubeconfig</code>.</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Subkube UI</label><div class="tabbed-content">
+<p>On your projects' page you will find the Kubeconfig card, which allows you to
+download the <code>kubeconfig</code> as a file, which will be called <code>subkubeconfig</code>, or
+you can show the <code>kubeconfig</code> for inspection or manual copy-pasting /
+distribution.</p>
+<p><img alt="Subkube UI Project Overview" class="shadow" src="/img/screenshots/app.poc.subku.be_projects_project.png" /></p>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">subctl</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>subctl use project &lt;project-uuid&gt;
 </code></pre></div>
 </td></tr></table>
-<h3 id="add-repo">Add Repo</h3>
-<p>Helm uses <strong>Repositories</strong> to store so-called <strong>Charts</strong>. Many Chart developers
-maintain their own Repository, which you need to add to your Helm configuration
-before you will be able to use their charts.</p>
-<p>For node-red, a very comprehensive chart is maintained by <a href="https://k8s-at-home.com/">k8s@home</a>,
-which we will be using in our guide. You can easily add their repo using the
-following commands:</p>
+</div>
+</div>
+<h2 id="deploy-workloads">Deploy workloads</h2>
+<p>Once we have our project, namespace and <code>kubectl</code> configured, we can check to
+see if everything works by running a test pod interactively.</p>
+<p>As you can notice
+- we've set a securityContext using overrides, please see
+  <a href="/concepts/workloads/">Concept: Workloads</a> for more on SecurityContext and
+  PodSecurityPolicies in Subkube
+- we've set limits for the pod using <code>--limits</code>, please see
+  <a href="/concepts/projects">Concept: Projects</a> for more on Resource Limits in Subkube</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>helm repo add k8s-at-home https://k8s-at-home.com/charts/
-&gt; &quot;k8s-at-home&quot; has been added to your repositories
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>kubectl run -n &lt;YOUR-NAMESPACE&gt; -i --tty busybox --image<span class="o">=</span>busybox <span class="se">\</span>
+  --overrides<span class="o">=</span><span class="s1">&#39;{&quot;spec&quot;:{&quot;securityContext&quot;:{&quot;runAsUser&quot;:65534}}}&#39;</span> <span class="se">\</span>
+  --limits<span class="o">=</span><span class="s1">&#39;cpu=100m,memory=100Mi&#39;</span> --rm sh
+$ <span class="nb">echo</span> <span class="s1">&#39;hello world!&#39;</span>
+hello world!
 </code></pre></div>
 </td></tr></table>
-<h3 id="first-install">First Install</h3>
-<p>We can install a chart using the <code>helm install</code> command, which takes the chart
-to install as an argument. Helm deploys applications in so-called <strong>Releases</strong>,
-for which you will need to provide a name as an argument. You'll also need to
-supply a namespace using the <code>-n</code> toggle.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>helm install node-red k8s-at-home/node-red -n poc-node-red
-&gt; NAME: node-red
-&gt; LAST DEPLOYED: Mon Nov 30 19:19:56 2020
-&gt; NAMESPACE: poc-n8n
-&gt; STATUS: deployed
-&gt; REVISION: 1
-&gt; TEST SUITE: None
-&gt; NOTES:
-&gt; 1. Get the application URL by running these commands:
-&gt;   export POD_NAME=$(kubectl get pods --namespace poc-n8n -l &quot;app.kubernetes.io/name=node-red,app.kubernetes.io/instance=node-red&quot; -o jsonpath=&quot;{.items[0].metadata.name}&quot;)
-&gt;   echo &quot;Visit http://127.0.0.1:8080 to use your application&quot;
-&gt;   kubectl port-forward $POD_NAME 8080:1880
-</code></pre></div>
-</td></tr></table>
-<h3 id="using-a-values-file">Using a Values file</h3>
-<h3 id="upgrading">Upgrading</h3>
-<h2 id="further-reading">Further Reading</h2>
-<ul>
-<li>Artifact Hub</li>
-<li>HASS, Node-red, homebridge</li>
-<li>Sonarr, Radarr, etc, if that's your kinda thing</li>
-</ul>
                 
               
               
@@ -830,7 +781,7 @@ supply a namespace using the <code>-n</code> toggle.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../kompose/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -839,19 +790,19 @@ supply a namespace using the <code>-n</code> toggle.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Deploy from Docker Compose using Kompose
+                Home
               </div>
             </div>
           </a>
         
         
-          <a href="../deploy-github-actions/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../interactive_console/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Automated Deployment using Github Actions
+                Using the Interactive Console
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

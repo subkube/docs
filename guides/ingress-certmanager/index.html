@@ -13,7 +13,7 @@
     
     
       
-        <title>Using Ingress with CertManager - Subkube Docs</title>
+        <title>Ingress certmanager - Subkube Docs</title>
       
     
     
@@ -95,7 +95,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Using Ingress with CertManager
+              Ingress certmanager
             
           </span>
         </div>
@@ -142,16 +142,14 @@
         
           
 
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link md-tabs__link--active">
         Home
       </a>
     
@@ -163,7 +161,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../getting_started/" class="md-tabs__link">
+        <a href="../../getting_started/initial_setup/" class="md-tabs__link">
           Getting Started
         </a>
       
@@ -189,7 +187,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../pod-security-context/" class="md-tabs__link md-tabs__link--active">
+        <a href="../pod-security-context/" class="md-tabs__link">
           Guides
         </a>
       
@@ -288,8 +286,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting_started/" class="md-nav__link">
-      Getting Started
+    <a href="../../getting_started/initial_setup/" class="md-nav__link">
+      Initial Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting_started/interactive_console/" class="md-nav__link">
+      Using the Interactive Console
     </a>
   </li>
 
@@ -365,12 +375,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Guides
@@ -416,126 +424,6 @@
   <li class="md-nav__item">
     <a href="../helm/" class="md-nav__link">
       Deploying Node-RED using Helm
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Using Ingress with CertManager
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
-      Using Ingress with CertManager
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
-    Steps
-  </a>
-  
-    <nav class="md-nav" aria-label="Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#deploy-a-workload" class="md-nav__link">
-    Deploy a workload
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setup-dns" class="md-nav__link">
-    Setup DNS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#defining-an-ingress" class="md-nav__link">
-    Defining an Ingress
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-an-issuer" class="md-nav__link">
-    Create an Issuer
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-ingress-to-use-issuer" class="md-nav__link">
-    Update Ingress to use Issuer
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verify-certificate" class="md-nav__link">
-    Verify Certificate
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#further-reading" class="md-nav__link">
-    Further Reading
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../soon/" class="md-nav__link">
-      Using Ingress with a Wildcard domain & certificate
     </a>
   </li>
 
@@ -760,7 +648,7 @@
               
                 
                 
-                  <h1>Using Ingress with CertManager</h1>
+                  <h1>Ingress certmanager</h1>
                 
                 <p>In this guide, we will be creating an <em>Ingress</em> resource to expose a workload
 to the world, after which we will setup Certmanager to automatically generate
@@ -1063,41 +951,6 @@ to setup the <em>CertificateRequest</em> and update the appropriate <em>Certific
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../helm/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Deploying Node-RED using Helm
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../soon/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Using Ingress with a Wildcard domain & certificate
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
