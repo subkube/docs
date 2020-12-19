@@ -13,7 +13,7 @@
     
     
       
-        <title>Services & Ingress - Subkube Docs</title>
+        <title>Services & Ingresses - Subkube Docs</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#about-services-ingresses" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -90,7 +95,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Services & Ingress
+              Services & Ingresses
             
           </span>
         </div>
@@ -315,10 +320,63 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Services & Ingresses
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
-      Services & Ingress
+      Services & Ingresses
     </a>
     
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-services-ingresses" class="md-nav__link">
+    About Services &amp; Ingresses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-services" class="md-nav__link">
+    Listing Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-ingress" class="md-nav__link">
+    Creating an Ingress
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../further_steps.md" class="md-nav__link">
+      Further Steps
+    </a>
   </li>
 
         
@@ -570,15 +628,65 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-services-ingresses" class="md-nav__link">
+    About Services &amp; Ingresses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-services" class="md-nav__link">
+    Listing Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-ingress" class="md-nav__link">
+    Creating an Ingress
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Services & Ingress</h1>
+                  <h1>Services & Ingresses</h1>
                 
-                <p>Coming Soon</p>
+                <p>Subkube comes with an easy to use User Interface to list services for your workloads and create Ingresses for them, including setting up a subdomain with SSL certificate on us.</p>
+<h2 id="about-services-ingresses">About Services &amp; Ingresses</h2>
+<p>In Kubernetes, <strong>Services</strong> are used to tell kubernetes what <em>ports</em> your <em>containers / pods</em> expose to allow network communication. Services are often created part of a (Helm)[] chart, or created for you when using (Kompose)[] for instance. If you are crafting your own workloads however, you will need to create these yourself as well.</p>
+<p><strong>Ingresses</strong> allow you to expose these <em>services</em> using a proxy. An ingress consists of a host name and an optional path to route external traffic to. It also offloads SSL using certificates configured &amp; stored in Kubernetes.</p>
+<p>In Subkube, you <em>have</em> to use an ingress resource to allow access to your application from the outside world, that way we can protect your application from malicious traffic like DDOS attacks, and keep your visistors surfing' smoothly.</p>
+<h2 id="listing-services">Listing Services</h2>
+<p>On the Project Show page, you can find a list of all services deployed to one of the projects' namespaces, along with any ingresses currently defined for that service.</p>
+<p><img alt="Subkube UI Services List" class="shadow" src="/img/screenshots/services_list.png" /></p>
+<h2 id="creating-an-ingress">Creating an Ingress</h2>
                 
               
               

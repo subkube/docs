@@ -13,7 +13,7 @@
     
     
       
-        <title>Security - Subkube Docs</title>
+        <title>Next steps - Subkube Docs</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#access-control" class="md-skip">
+        <a href="#helm-charts" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Security
+              Next steps
             
           </span>
         </div>
@@ -142,16 +142,14 @@
         
           
 
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link md-tabs__link--active">
         Home
       </a>
     
@@ -163,7 +161,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../getting_started/initial_setup/" class="md-tabs__link">
+        <a href="../initial_setup/" class="md-tabs__link">
           Getting Started
         </a>
       
@@ -176,7 +174,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../project/" class="md-tabs__link md-tabs__link--active">
+        <a href="../../concepts/project/" class="md-tabs__link">
           Concepts
         </a>
       
@@ -288,7 +286,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting_started/initial_setup/" class="md-nav__link">
+    <a href="../initial_setup/" class="md-nav__link">
       Initial Setup
     </a>
   </li>
@@ -300,7 +298,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting_started/interactive_console/" class="md-nav__link">
+    <a href="../interactive_console/" class="md-nav__link">
       Interactive Console
     </a>
   </li>
@@ -312,7 +310,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting_started/services_ingresses/" class="md-nav__link">
+    <a href="../services_ingresses/" class="md-nav__link">
       Services & Ingresses
     </a>
   </li>
@@ -324,7 +322,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting_started/further_steps.md" class="md-nav__link">
+    <a href="../further_steps.md" class="md-nav__link">
       Further Steps
     </a>
   </li>
@@ -339,12 +337,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Concepts
@@ -364,7 +360,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../project/" class="md-nav__link">
+    <a href="../../concepts/project/" class="md-nav__link">
       Project
     </a>
   </li>
@@ -376,7 +372,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../workloads/" class="md-nav__link">
+    <a href="../../concepts/workloads/" class="md-nav__link">
       Workloads
     </a>
   </li>
@@ -386,126 +382,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Security
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../concepts/security/" class="md-nav__link">
       Security
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
-  </a>
-  
-    <nav class="md-nav" aria-label="Access Control">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2-factor-authentication" class="md-nav__link">
-    2 Factor Authentication
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api-keys" class="md-nav__link">
-    API Keys
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workload-isolation" class="md-nav__link">
-    Workload Isolation
-  </a>
-  
-    <nav class="md-nav" aria-label="Workload Isolation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#restricted-pod-security-policy" class="md-nav__link">
-    Restricted Pod Security Policy
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#namespace-network-isolation" class="md-nav__link">
-    Namespace Network Isolation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cluster-operations" class="md-nav__link">
-    Cluster Operations
-  </a>
-  
-    <nav class="md-nav" aria-label="Cluster Operations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hardening" class="md-nav__link">
-    Hardening
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#end-to-end-encryption" class="md-nav__link">
-    End-to-end Encryption
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lets-encrypt-integration" class="md-nav__link">
-    Let's Encrypt Integration
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -710,23 +591,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
+  <a href="#helm-charts" class="md-nav__link">
+    Helm Charts
   </a>
   
-    <nav class="md-nav" aria-label="Access Control">
+    <nav class="md-nav" aria-label="Helm Charts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#2-factor-authentication" class="md-nav__link">
-    2 Factor Authentication
+  <a href="#wordpress" class="md-nav__link">
+    Wordpress
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-keys" class="md-nav__link">
-    API Keys
+  <a href="#home-assistant" class="md-nav__link">
+    Home Assistant
   </a>
   
 </li>
@@ -737,63 +618,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#workload-isolation" class="md-nav__link">
-    Workload Isolation
+  <a href="#building-an-app-from-scratch" class="md-nav__link">
+    Building an App from scratch
   </a>
-  
-    <nav class="md-nav" aria-label="Workload Isolation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#restricted-pod-security-policy" class="md-nav__link">
-    Restricted Pod Security Policy
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#namespace-network-isolation" class="md-nav__link">
-    Namespace Network Isolation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cluster-operations" class="md-nav__link">
-    Cluster Operations
-  </a>
-  
-    <nav class="md-nav" aria-label="Cluster Operations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hardening" class="md-nav__link">
-    Hardening
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#end-to-end-encryption" class="md-nav__link">
-    End-to-end Encryption
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lets-encrypt-integration" class="md-nav__link">
-    Let's Encrypt Integration
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -810,34 +637,36 @@
               
                 
                 
-                  <h1>Security</h1>
+                  <h1>Next steps</h1>
                 
-                <p>As a shared tenant platform, Subkube takes security very seriously. Luckily, the container &amp; kubernetes ecosystem have been designed from the ground up with security on various levels in mind.</p>
-<h2 id="access-control">Access Control</h2>
-<p>Security starts at the front door. The Subkube platform uses state-of-the-art technology to ensure a user's identity before allowing access to any of our systems and applications.</p>
-<h3 id="2-factor-authentication">2 Factor Authentication</h3>
-<p>In general it's good habit to enable 2 factor authentication for your accounts whenever possible. Subkube offers a basic TOTP implementation, allowing you to use most Authenticator apps to generate tokens allowing you to login using the application interface or our <code>subctl</code> CLI.</p>
-<p>During 2FA setup, a backup token will be generated and shown, allowing you to regain access to your account if for some reason your TOTP applications is no longer able to produce valid tokens for your Subkube account (a lost phone for instance). Be sure to store the backup token in a safe place, to ensure access to your Subkube account at all times.</p>
-<h3 id="api-keys">API Keys</h3>
-<p>In modern day IT, we want to automate everything, but not at the expense of security. Fine-grained access control for automated processes is key in achieving this.</p>
-<p>Subkube implements a flexible way to create API tokens, to be consumed by various application, such as 3rd party services like Github and Gitlab, scripts running locally or on premise, but also in-cluster, to be used by auto-scaling tools for example. Tokens can be revoked at any time easily from the Subkube interface.</p>
-<h2 id="workload-isolation">Workload Isolation</h2>
-<p>As we briefly outlined in <a href="../workloads/">Workloads</a>, Subkube kubernetes clusters enforce certain policies and restrictions on the workloads customers run, the most important of which are the following:</p>
-<h3 id="restricted-pod-security-policy">Restricted Pod Security Policy</h3>
-<p>All namespaces created on Subkube have a 'restricted' PodSecurityPolicy applied by default. Amongst other things, this prohibits containers from running as the <code>root</code> user, and all security implications this has. For most applications, and well designed container images, this shouldn't pose a problem.</p>
-<p>As containers can not run as root, most processes will be unable to, for instance, allocate a port lower than <code>1000</code>. Also, package management isn't available while not running as user <code>root</code>. Though this might seem problematic at first, it really shouldn't be.</p>
-<p>If a container has been though-out and built properly, applications will never need these kinds of permissions in  order to run, and as such, neither does your container. For instance, if you feel you need <code>systemd</code> or <code>init</code> inside your container, you're probably trying to put various processes in a single container, which is bad practise, as Kubernetes offers you the Pod concept, specifically to deal with these kinds of "groups" of processes.</p>
-<h3 id="namespace-network-isolation">Namespace Network Isolation</h3>
-<p>As in any decent microservices architecture services need to be able to talk to oneanother, providing network connectivity between pods is vital to any Kubernetes deployment. However, as Subkube uses a shared tenancy principle, we do need to seperate traffic from various customers.</p>
-<p>We accomplish this by isolating traffic to a namespace, using Network Policies. Our clusters run Canal, a mixed implementation of Flannel to provide inter-node and inter-pod connectivity, combined with Calico to provide network policy management &amp; enforcement.</p>
-<p>By default, when a Namespace is created inside a project, NetworkPolicies are defined inside the namespace to allow traffic between the namespaces inside your project, and namespaces hosting Subkube shared services, such as the Ingress Controller.</p>
-<h2 id="cluster-operations">Cluster Operations</h2>
-<h3 id="hardening">Hardening</h3>
-<p>All our Kubernetes nodes run on selinux-enforced CentOS 8 Core, hardened according to enterprise standard. Our Kubernetes deployment takes all Kubernetes hardening considerations into account, and we run daily automated audits to ensure our clusters are compliant with the CIS Hardened benchmark.</p>
-<h3 id="end-to-end-encryption">End-to-end Encryption</h3>
-<p>We use Wireguard, both to connect our control-plane and worker nodes together, and to connect our frontend and APIs to our backing Kubernetes clusters, hosted across the internet. Wireguard is state-of-the-art and allows for full encryption with minimal overhead, to ensure fast response times across the platform.</p>
-<h3 id="lets-encrypt-integration">Let's Encrypt Integration</h3>
-<p>All projects utilising Ingress for connectivity benefit from out Let's Encrypt integration, which offers a wildcard certificate to be used by ingress resources in project namespaces, so we can properly enforce SSL for connecting to Ingress-exposed services.</p>
+                <p>Once you know the basics of Subkube, let's deploy something cool. We've outlined some resources we think are great to get started using Kubernetes on Subkube.</p>
+<h2 id="helm-charts">Helm Charts</h2>
+<p>Helm is a great tool to get to know k8s using your favourite apps, as it allows you to install and upgrade entire applications to namespaces. From there on you can use our <a href="../services_ingresses/">Ingress UI</a> to expose your apps to the world!</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is highly recommended you read the <a href="../../guides/helm/">fairly extensive guide</a> we've written on how to use helm before attempting to run any of the following examples. <strong>Consider yourself warned</strong></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The following code samples assume a default namespace is set, as outlined <a href="../interactive_console/#setting-a-default-namespace-to-use">here</a>.</p>
+</div>
+<h4 id="wordpress">Wordpress</h4>
+<p>The worlds most popular CMS, now on Subkube!</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install wordpress bitnami/wordpress --set resources.limits.memory=512Mi --set resources.limits.cpu=300m 
+</code></pre></div>
+</td></tr></table>
+<h4 id="home-assistant">Home Assistant</h4>
+<p>Control your home from the cloud! Well, almost 😉</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>helm repo add k8s-at-home https://k8s-at-home.com/charts/
+helm install home-assistant k8s-at-home/home-assistant
+</code></pre></div>
+</td></tr></table>
+<h2 id="building-an-app-from-scratch">Building an App from scratch</h2>
+<p>Kubernetes is the ideal platform to develop your new idea on. Use the following guides to get started using the programming language of your preference.</p>
+<p><em>Coming Soon</em></p>
                 
               
               
@@ -852,41 +681,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../workloads/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Workloads
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../guides/pod-security-context/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Configure a Pod to run with a limited SecurityContext
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
