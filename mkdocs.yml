@@ -29,7 +29,8 @@ nav:
   - Getting Started:
     - Initial Setup: getting_started/initial_setup.md
     - Interactive Console: getting_started/interactive_console.md
-    - Services & Ingress: getting_started/services_ingresses.md
+    - Services & Ingresses: getting_started/services_ingresses.md
+    - Further Steps: getting_started/further_steps.md
   - Concepts:
     - Project: concepts/project.md
     - Workloads: concepts/workloads.md

@@ -1,8 +1,7 @@
 Helm describes itself as the package manager for Kubernetes. It allows us to
 quickly install and upgrade an Application including all it's dependencies.
 
-In this guide we'll deploy an instance of node-red, an awesome automation tool you
-can easily host yourself.
+In this guide we'll deploy an instance of `node-red,` an awesome automation tool you can easily host yourself.
 
 There are literally thousands of Helm charts you can easily deploy to any
 Subkube project, we've added a list at the bottom of the page for some awesome
