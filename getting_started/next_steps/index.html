@@ -13,7 +13,7 @@
     
     
       
-        <title>Next steps - Subkube Docs</title>
+        <title>Next Steps - Subkube Docs</title>
       
     
     
@@ -95,7 +95,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Next steps
+              Next Steps
             
           </span>
         </div>
@@ -142,14 +142,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     
@@ -161,7 +163,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../initial_setup/" class="md-tabs__link">
+        <a href="../initial_setup/" class="md-tabs__link md-tabs__link--active">
           Getting Started
         </a>
       
@@ -263,10 +265,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Getting Started
@@ -320,11 +324,72 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../further_steps.md" class="md-nav__link">
-      Further Steps
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Next Steps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Next Steps
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#helm-charts" class="md-nav__link">
+    Helm Charts
+  </a>
+  
+    <nav class="md-nav" aria-label="Helm Charts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wordpress" class="md-nav__link">
+    Wordpress
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#home-assistant" class="md-nav__link">
+    Home Assistant
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-an-app-from-scratch" class="md-nav__link">
+    Building an App from scratch
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -637,7 +702,7 @@
               
                 
                 
-                  <h1>Next steps</h1>
+                  <h1>Next Steps</h1>
                 
                 <p>Once you know the basics of Subkube, let's deploy something cool. We've outlined some resources we think are great to get started using Kubernetes on Subkube.</p>
 <h2 id="helm-charts">Helm Charts</h2>
@@ -681,6 +746,41 @@ helm install home-assistant k8s-at-home/home-assistant
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../services_ingresses/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Services & Ingresses
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../concepts/project/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Project
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
