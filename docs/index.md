@@ -1,10 +1,12 @@
-Welcome to SubKube Developers. Here you will find all relevant information to deploy your application on SubKube.
+Welcome to the Subkube Docs. Here you will find all relevant information to deploy your application on Subkube.
 
 ---
 
 ## Getting Started
 
-Get started using Subkube in less then 1 minute, using our [Getting Started Guide](getting_started.md).
+Get started using Subkube in less then 1 minute, using our [Getting Started Guide](getting_started/initial_setup.md).
+
+[Initial Setup](getting_started/initial_setup.md) | [Interactive Console](getting_started/interactive_console.md) | [Services & Ingresses](getting_started/services_ingresses.md)
 
 ---
 
@@ -38,7 +40,6 @@ Whether you're an experienced Kubernetes App Developer or just getting started, 
 ### Security
 
 - [Configure a Pod to run with a limited SecurityContext](guides/pod-security-context.md)
-- [Using Ingress with CertManager](guides/ingress-certmanager.md)
 
 ---
 

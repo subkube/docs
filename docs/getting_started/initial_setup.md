@@ -1,4 +1,4 @@
-# Getting Started
+# Initial Setup
 
 !!! tip
     For hardcore command line users, we've created `subctl`, a simple CLI tool
@@ -13,11 +13,11 @@ To start using SubKube, [sign up for an account](http://app.subku.be/accounts/si
 
 Before you can start creating projects, you'll need to setup a billing method
 
-!!!+ tip
-  If you wish to use `subctl`, don't forget to log in
-  ``` sh
-  subctl login
-  ```
+!!! tip
+    If you wish to use `subctl`, don't forget to log in
+    ``` sh
+    subctl login
+    ```
 
 
 ## Create a Project
@@ -58,6 +58,9 @@ our Workloads to.
 
 ## Setup Kubectl
 
+!!! tip
+    If you don't have `kubectl` locally installed, checkout our [Interactive Console](interactive_console.md), which sets up your `kubeconfig` automatically for you, and offers `helm` and others besides `kubectl`.
+
 In order to use `kubectl`, we need to setup our `kubeconfig`.
 
 === "Subkube UI"
@@ -82,11 +85,14 @@ Once we have our project, namespace and `kubectl` configured, we can check to
 see if everything works by running a test pod interactively.
 
 As you can notice
+
 - we've set a securityContext using overrides, please see
   [Concept: Workloads](/concepts/workloads/) for more on SecurityContext and
   PodSecurityPolicies in Subkube
+
 - we've set limits for the pod using `--limits`, please see
   [Concept: Projects](/concepts/projects) for more on Resource Limits in Subkube
+
 
 ```sh
 kubectl run -n <YOUR-NAMESPACE> -i --tty busybox --image=busybox \
