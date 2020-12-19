@@ -6,7 +6,7 @@ Welcome to the Subkube Docs. Here you will find all relevant information to depl
 
 Get started using Subkube in less then 1 minute, using our [Getting Started Guide](getting_started/initial_setup.md).
 
-[Initial Setup](getting_started/initial_setup.md) | [Interactive Console](getting_started/interactive_console.md) | [Services & Ingresses](getting_started/services_ingresses.md)
+[Initial Setup](getting_started/initial_setup.md) | [Interactive Console](getting_started/interactive_console.md) | [Services & Ingresses](getting_started/services_ingresses.md) | [Next Steps](getting_started/next_steps.md)
 
 ---
 

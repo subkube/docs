@@ -30,7 +30,7 @@ nav:
     - Initial Setup: getting_started/initial_setup.md
     - Interactive Console: getting_started/interactive_console.md
     - Services & Ingresses: getting_started/services_ingresses.md
-    - Further Steps: getting_started/further_steps.md
+    - Next Steps: getting_started/next_steps.md
   - Concepts:
     - Project: concepts/project.md
     - Workloads: concepts/workloads.md
